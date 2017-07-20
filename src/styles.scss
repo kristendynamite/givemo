@@ -1,2 +1,72 @@
 @import '~bourbon/app/assets/stylesheets/_bourbon';
 @import '~bourbon-neat/app/assets/stylesheets/_neat';
+
+//font colors
+
+$vintage: #FFFAF0;
+$gold: #E6BB00;
+$denim: #086788;
+$cool-blue: #06AED5;
+$red: #DD1C1A;
+$grey: #444444;
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  background: linear-gradient(45deg, darken($gold, 10%), lighten($cool-blue, 20%));
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.card-body {
+  background-color: $vintage;
+  margin: 7px;
+  padding: 5px;
+}
+//typography
+
+h1 {
+  font-family: 'Oleo Script', cursive;
+  color: $grey;
+  margin: 0;
+}
+
+h2, h3, h4, h5 {
+  font-family: 'Catamaran', sans-serif;
+  text-transform: uppercase;
+  color: $grey;
+}
+
+.fa-heart-o {
+    color: $grey;
+    font-size: 20px;
+  }
+
+.fa-heart {
+    color: $red;
+    font-size: 20px;
+  }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 0;
+  background: $vintage;
+  i {
+    font-size: 20px;
+    color: $grey;
+    &:nth-of-type(2) {
+      font-size: 23px;
+    }
+  }
+  .site-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #logo {
+      height: 35px;
+      margin-left: 10px;
+    }
+  }
+}
