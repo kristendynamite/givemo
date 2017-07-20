@@ -19,7 +19,7 @@ import { AuthGuard } from './auth-guard.service';
 import { AuthenticationService } from './authentication.service';
 
 export const firebaseConfig = {
-  apiKeys: masterFirebaseConfig.apiKey,
+  apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
   databaseURL: masterFirebaseConfig.databaseURL,
   storageBucket: masterFirebaseConfig.storageBucket,

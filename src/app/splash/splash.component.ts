@@ -15,6 +15,8 @@ export class SplashComponent {
   private isLoggedIn: Boolean;
   private userName: String;
 
+  title = 'givemo';
+
   constructor(public authService: AuthenticationService, private router: Router) {
     this.authService.user.subscribe(user =>  {
       if (user == null) {
@@ -33,10 +35,6 @@ export class SplashComponent {
 
   login() {
     this.authService.login();
-  }
-
-  logout() {
-    this.authService.logout();
   }
 
 }
