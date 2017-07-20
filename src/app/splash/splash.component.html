@@ -1,10 +1,6 @@
-<form>
-  <div class="form-group">
-    <label for="user-name">UserName</label>
-    <input type=name #userName>
-    <br>
-    <label for="password">Password</label>
-    <input type=password #password>
-  </div>
-  <button (click)="getUserAuthentication(userName.value, password.value)">Sign In</button>
-</form>
+<div *ngIf ="!isLoggedIn">
+  <a (click)="login()">Log in</a>
+</div>
+<div *ngIf="user">
+  <app-profile></app-profile>
+</div>

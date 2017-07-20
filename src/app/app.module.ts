@@ -10,6 +10,21 @@ import { ProfileComponent } from './profile/profile.component';
 import { CharityListComponent } from './charity-list/charity-list.component';
 import { DonateComponent } from './donate/donate.component';
 import { routing } from './app.routing';
+import { FooterComponent } from './footer/footer.component';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { masterFirebaseConfig } from './api-keys';
+import { AuthGuard } from './auth-guard.service';
+import { AuthenticationService } from './authentication.service';
+
+export const firebaseConfig = {
+  apiKeys: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket,
+  messagingSenderId: masterFirebaseConfig.messagingSenderId
+};
 
 @NgModule({
   declarations: [
@@ -18,15 +33,19 @@ import { routing } from './app.routing';
     SplashComponent,
     ProfileComponent,
     CharityListComponent,
-    DonateComponent
+    DonateComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     routing,
-    HttpModule
+    HttpModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
   ],
-  providers: [],
+  providers: [AuthGuard, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
