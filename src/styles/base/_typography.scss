@@ -1,0 +1,25 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  font-family: 'Oleo Script', cursive;
+  color: $grey;
+  margin: 0;
+}
+
+h2, h3, h4, h5 {
+  font-family: 'Catamaran', sans-serif;
+  text-transform: uppercase;
+  color: $grey;
+}
+
+.fa-heart-o {
+    color: $grey;
+    font-size: 20px;
+  }
+
+.fa-heart {
+    color: $red;
+    font-size: 20px;
+  }
