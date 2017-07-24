@@ -20,6 +20,5 @@ export class CharityListApiService {
   //   return this.http.get(`https://Sandboxdata.guidestar.org/v1_1/search?q=state:or`,  options )
   // }
 
-test merge conflict
 
 }

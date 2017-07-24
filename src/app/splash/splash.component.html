@@ -2,11 +2,13 @@
   <a (click)="login()">Log in</a>
 </div>
 <div *ngIf="user" class="header">
-  <i class="fa fa-search" aria-hidden="true"></i>
-  <div class="site-logo">
-    <h1>{{title}}</h1>
-    <img id="logo" src="../assets/logo.png">
-  </div>
-  <i class="fa fa-user" aria-hidden="true"></i>
+  <nav>
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <div class="site-logo">
+      <h1>{{title}}</h1>
+      <img id="logo" src="../assets/logo.png">
+    </div>
+    <i class="fa fa-user" aria-hidden="true"></i>
+  </nav>
+  <app-profile></app-profile>
 </div>
-<app-profile></app-profile>

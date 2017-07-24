@@ -14,6 +14,7 @@ export class ProfileComponent implements OnInit {
   user;
   private isLoggedIn: Boolean;
   private userName: String;
+  private userPhoto: String;
 
   constructor(public authService: AuthenticationService, private router: Router) {
     this.authService.user.subscribe(user =>  {
@@ -21,7 +22,10 @@ export class ProfileComponent implements OnInit {
         this.isLoggedIn = false;
       } else {
         this.isLoggedIn = true;
+        console.log(user);
         this.userName = user.displayName;
+        this.userPhoto = user.photoURL;
+        console.log(user.photoURL);
         this.router.navigate([]);
       }
     });
