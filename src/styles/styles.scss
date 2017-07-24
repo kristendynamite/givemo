@@ -7,10 +7,3 @@
 @import "layout/main";
 @import "pages/main";
 @import "themes/main";
-
-body {
-  margin: 0;
-  background: linear-gradient(45deg, darken($gold, 10%), lighten($cool-blue, 20%));
-  background-repeat: no-repeat;
-  height: 100vh;
-}

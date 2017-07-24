@@ -19,4 +19,18 @@ export class AuthenticationService {
     this.afAuth.auth.signOut();
   }
 
+  userInfo() {
+    this.afAuth.auth.onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+        var displayName = user.displayName;
+        var photoURL = user.photoURL;
+        // ...
+      } else {
+        // User is signed out.
+        // ...
+      }
+    });    
+  }
+
 }
