@@ -1,24 +1,33 @@
 import { Component } from '@angular/core';
-// import { CharityListApiService } from '../charity-list-api.service';
+import { FirebaseService } from '../firebase.service';
+import { Observable } from 'rxjs/Observable';
+
 
 
 @Component({
   selector: 'app-charity-form',
   templateUrl: './charity-form.component.html',
   styleUrls: ['./charity-form.component.scss'],
-  // providers: [CharityListApiService]
+  providers: [FirebaseService]
 })
 export class CharityFormComponent {
 
-  // charities: any[]=null;
+  charities: any[];
+
+  constructor(private database: FirebaseService ) { }
+
+  showCharities(name: string) {
+    this.database.getCharities().subscribe(response =>{
+    //return this.charities = response.json();
+    });
+  }
+
   // constructor(private charityApi: CharityListApiService) { }
 
   // showCharities(name: string) {
   //   this.charityApi.getCharities(name).subscribe(response =>{
   //   return this.charities = response.json();
   //   });
-  // showCharities(organization_id: number, ein: string, organization_name: string, mission: string, nteecode: string, website: string){
-  // }
-  // }
+
 
 }

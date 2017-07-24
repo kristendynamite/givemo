@@ -8,5 +8,16 @@
   "cause": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
   "financialRating": "4",
   "accountabilityRating": "4"
+},
+  {
+  "ein": 11112,
+  "charityName": "Chilren center",
+  "category": "3",
+  "websiteURL": "https://epicodus.com/",
+  "rating": "4",
+  "tag_line": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
+  "cause": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+  "financialRating": "2",
+  "accountabilityRating": "3"
   }]
 }
