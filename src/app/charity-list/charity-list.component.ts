@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { FirebaseService } from '../firebase.service';
 
@@ -10,7 +10,7 @@ import { FirebaseService } from '../firebase.service';
 })
 export class CharityListComponent implements OnInit {
 
-  charities: FirebaseListObservable<any[]>;
+  @Input() charities: any[];
 
   constructor(private firebase: FirebaseService) {
 

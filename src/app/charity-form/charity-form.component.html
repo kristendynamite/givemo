@@ -9,6 +9,6 @@
 
 <button (click)="showAllCharities();">Get Result</button>
 
-<!-- <div *ngIf="charityList">
-  <app-charity-list [childCharities]="charityList"></app-charity-list>
-</div> -->
+<div *ngIf="charities">
+  <app-charity-list [charities]="charities"></app-charity-list>
+</div>
