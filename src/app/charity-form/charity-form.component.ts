@@ -4,14 +4,11 @@ import { CharityListApiService } from '../charity-list-api-service.service';
 
 
 
-
-
-
 @Component({
   selector: 'app-charity-form',
   templateUrl: './charity-form.component.html',
   styleUrls: ['./charity-form.component.scss'],
-  providers: [CharityListApiService]
+  // providers: [CharityListApiService]
 })
 export class CharityFormComponent {
 
