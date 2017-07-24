@@ -11,7 +11,7 @@ import * as firebase from 'firebase/app';
   providers: [ AuthenticationService ]
 })
 export class ProfileComponent implements OnInit {
-
+  title = 'givemo';
   user;
   private isLoggedIn: Boolean;
   private userName: String;

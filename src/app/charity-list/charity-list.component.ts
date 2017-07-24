@@ -10,7 +10,7 @@ import { Charity } from '../charity.model';
   providers: [ FirebaseService ]
 })
 export class CharityListComponent implements OnInit {
-
+  title = 'givemo';
   charities: FirebaseListObservable<any[]>;
 
   constructor(private firebase: FirebaseService) { }
