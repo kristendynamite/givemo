@@ -11,7 +11,7 @@ import { Observable } from 'rxjs/Observable';
   providers: [FirebaseService]
 })
 export class CharityFormComponent {
-
+  title = 'givemo';
   charities: any[] = null;
   // console.log(charities);
 
@@ -25,10 +25,7 @@ export class CharityFormComponent {
 
   showAllCharities() {
     this.database.getCharities().subscribe(response =>{
-
-    console.log(response);
     this.charities = response;
-    console.log(this.charities);
     });
   }
 
