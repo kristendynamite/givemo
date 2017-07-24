@@ -4,6 +4,7 @@ import { SplashComponent } from './splash/splash.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AboutComponent } from './about/about.component';
 import { CharityListComponent } from './charity-list/charity-list.component';
+import { CharityFormComponent } from './charity-form/charity-form.component';
 
 const appRoutes: Routes = [
   {
