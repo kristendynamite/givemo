@@ -13,7 +13,7 @@ export class CharityListApiService {
   charities: FirebaseListObservable<any[]>;
 
   constructor(private http: Http, private database: AngularFireDatabase) {
-    this.charities = database.list(charities)
+    this.charities = database.list('charities');
   }
 
   // getCharities(name: string ) {
