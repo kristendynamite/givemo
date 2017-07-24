@@ -1,1 +1,17 @@
-<router-outlet></router-outlet>
+<div *ngIf ="!isLoggedIn">
+  <router-outlet></router-outlet>
+</div>
+<div *ngIf="user" class="header">
+  <nav>
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <div class="site-logo">
+      <h1>{{title}}</h1>
+      <img id="logo" src="../assets/logo.png">
+    </div>
+    <i class="fa fa-user" aria-hidden="true"></i>
+  </nav>
+  <app-profile></app-profile>
+  <footer>
+    <p routerLink="about">About</p>
+  </footer>
+</div>

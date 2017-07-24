@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { Headers } from '@angular/http';
 import { RequestOptions } from '@angular/http';
 import { Http, Response, } from '@angular/http';
+import { Charity } from './charity.model';
 
 @Injectable()
 export class FirebaseService {
@@ -16,5 +17,9 @@ export class FirebaseService {
 
    getCharities(){
      return this.charities;
+   }
+
+   addCharity(newCharity: Charity) {
+     this.charities.push(newCharity);
    }
 }

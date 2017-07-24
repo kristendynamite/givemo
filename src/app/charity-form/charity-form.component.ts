@@ -17,9 +17,9 @@ export class CharityFormComponent {
   constructor(private database: FirebaseService ) { }
 
   showCharities(name: string) {
-    this.database.getCharities().subscribe(response =>{
-    //return this.charities = response.json();
-    });
+    // this.database.getCharities().subscribe(response =>{
+    // return this.charities = response.json();
+    // });
   }
 
   // constructor(private charityApi: CharityListApiService) { }
