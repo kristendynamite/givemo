@@ -1,5 +1,14 @@
+<nav>
+  <i routerLink="../charity-list" class="fa fa-search" aria-hidden="true"></i>
+  <div class="site-logo">
+    <h1>{{title}}</h1>
+    <img id="logo" src="../assets/logo.png">
+  </div>
+  <i routerLink="../profile" class="fa fa-user" aria-hidden="true"></i>
+</nav>
 <div class="profile-card">
   <p>{{userName}}</p>
   <img src="{{userPhoto}}">
 </div>
 <button (click)="logout()">Logout</button>
+<footer routerLink="../about">About</footer>

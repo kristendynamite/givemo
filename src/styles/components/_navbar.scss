@@ -1,27 +1,27 @@
 .header {
   margin: 0;
-  nav {
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 0;
+  background: $vintage;
+  box-shadow: 0 -5px 30px black;
+  i {
+    font-size: 20px;
+    color: $grey;
+    &:nth-of-type(2) {
+      font-size: 23px;
+    }
+  }
+  .site-logo {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 5px 0;
-    background: $vintage;
-    box-shadow: 0 -5px 30px black;
-    i {
-      font-size: 20px;
-      color: $grey;
-      &:nth-of-type(2) {
-        font-size: 23px;
-      }
-    }
-    .site-logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      #logo {
-        height: 35px;
-        margin-left: 10px;
-      }
+    justify-content: center;
+    #logo {
+      height: 35px;
+      margin-left: 10px;
     }
   }
 }

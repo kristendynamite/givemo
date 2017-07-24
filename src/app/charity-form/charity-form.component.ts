@@ -15,7 +15,6 @@ export class CharityFormComponent {
   charities: any[] = null;
   // console.log(charities);
 
-
   constructor(private database: FirebaseService ) { }
 
   // showCharities(name: string) {
