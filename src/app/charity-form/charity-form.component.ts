@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { CharityListApiService } from '../charity-list-api.service';
+import { CharityListApiService } from '../charity-list-api-service.service';
+
 
 
 @Component({
@@ -10,9 +11,9 @@ import { CharityListApiService } from '../charity-list-api.service';
 })
 export class CharityFormComponent {
 
-  charities: any[]=null;
-  constructor(private charityApi: CharityListApiService) { }
 
+  constructor(private charityApi: CharityListApiService) { }
+  charities: 
   showCharities(name: string) {
     this.charityApi.getCharities(name).subscribe(response =>{
     return this.charities = response.json();
