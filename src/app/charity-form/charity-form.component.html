@@ -1,0 +1,12 @@
+<form>
+  <div class="form-group">
+    <label for="name">Organization Name</label>
+    <input #name>
+  </div>
+
+  <button (click)="showCharities(name.value);false">Get Result</button>
+</form>
+
+<div *ngIf="charityList">
+  <app-charity-list [childCharities]="charityList"></app-charity-list>
+</div>

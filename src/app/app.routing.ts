@@ -19,6 +19,10 @@ const appRoutes: Routes = [
     component: AboutComponent
   },
   {
+    path: 'charity-form',
+    component: CharityFormComponent
+  },
+  {
     path: 'charity-list',
     component: CharityListComponent
   }

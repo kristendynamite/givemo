@@ -17,6 +17,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { masterFirebaseConfig } from './api-keys';
 import { AuthGuard } from './auth-guard.service';
 import { AuthenticationService } from './authentication.service';
+import { CharityFormComponent } from './charity-form/charity-form.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -34,7 +35,8 @@ export const firebaseConfig = {
     ProfileComponent,
     CharityListComponent,
     DonateComponent,
-    FooterComponent
+    FooterComponent,
+    CharityFormComponent
   ],
   imports: [
     BrowserModule,

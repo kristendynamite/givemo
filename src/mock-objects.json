@@ -1,0 +1,12 @@
+{"charities": [{
+  "ein": 11111,
+  "charityName": "Chilren center",
+  "category": "2",
+  "websiteURL": "https://epicenter.epicodus.com/",
+  "rating": "4",
+  "tag_line": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
+  "cause": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+  "financialRating": "4",
+  "accountabilityRating": "4"
+  }]
+}
