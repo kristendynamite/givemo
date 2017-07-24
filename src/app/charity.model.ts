@@ -1,3 +1,5 @@
 export class Charity {
-  constructor (public organization_id: number, public ein: string, public organization_name: string, public mission: string, public nteecode: string, public website: string)
+
+  constructor (public ein: string, public charityName: string, public category: number, public websiteURL: string, public rating: number, public tagLine: string, public cause: string, public financialRating: string, public accountabilityRating: string) {}
+
 }

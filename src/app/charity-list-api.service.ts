@@ -24,5 +24,18 @@
 //
 // }
 
+// @Injectable()
+// export class CharityListApiService {
+//   constructor(private http: Http) { }
 
-// .........UNUSED SERVICE..................
+  // getCharities(name: string ) {
+  //   let headers = new Headers();
+  //   // headers.append('username', GUIDESTAR_API_KEY);
+  //   console.log(headers);
+  //   let options = new RequestOptions({headers: headers});
+  //   console.log(options);
+  //   return this.http.get(`https://Sandboxdata.guidestar.org/v1_1/search?q=state:or`,  options )
+  // }
+
+
+// }
