@@ -4,8 +4,10 @@
     <input #name>
   </div>
 
-  <button (click)="showCharities(name.value);false">Get Result</button>
+  <button (click)="showCharities(name.value);">Get Result</button>
 </form>
+
+<button (click)="showAllCharities();">Get Result</button>
 
 <!-- <div *ngIf="charityList">
   <app-charity-list [childCharities]="charityList"></app-charity-list>

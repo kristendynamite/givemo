@@ -16,18 +16,17 @@ export class CharityFormComponent {
 
   constructor(private database: FirebaseService ) { }
 
-  showCharities(name: string) {
-    this.database.getCharities().subscribe(response =>{
-    //return this.charities = response.json();
-    });
-  }
-
-  // constructor(private charityApi: CharityListApiService) { }
-
   // showCharities(name: string) {
-  //   this.charityApi.getCharities(name).subscribe(response =>{
+  //   this.database.getCharities().subscribe(response =>{
   //   return this.charities = response.json();
   //   });
+  // }
 
+  showAllCharities() {
+    this.database.getCharities().subscribe(response =>{
+    console.log(response)
+    // return this.charities = response.json();
+    });
+  }
 
 }
