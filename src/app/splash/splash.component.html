@@ -1,14 +1,15 @@
-<div *ngIf ="!isLoggedIn">
-  <a (click)="login()">Log in</a>
-</div>
-<div *ngIf="user" class="header">
-  <nav>
-    <i class="fa fa-search" aria-hidden="true"></i>
-    <div class="site-logo">
-      <h1>{{title}}</h1>
-      <img id="logo" src="../assets/logo.png">
+<div class="splash-page">
+  <div *ngIf ="!isLoggedIn" class="splash-log-in">
+    <h1>givemo</h1>
+    <div class="holder">
+      <div class="log-in-card">
+        <h2>Log in</h2>
+        <a (click)="login()"><img src="../assets/google-signin.png"></a>
+      </div>
     </div>
-    <i class="fa fa-user" aria-hidden="true"></i>
-  </nav>
-  <app-profile></app-profile>
+    <img id="white-logo" src="../assets/white-logo.png" alt="">
+  </div>
+  <div *ngIf="user" class="header">
+    <div routerLink="profile"></div>
+  </div>
 </div>
