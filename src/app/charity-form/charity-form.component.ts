@@ -12,7 +12,10 @@ import { Observable } from 'rxjs/Observable';
 })
 export class CharityFormComponent {
 
+  title = 'givemo';
   charities: any[] = [];
+  // console.log(charities);
+
 
   constructor(private database: FirebaseService ) { }
 
@@ -36,7 +39,6 @@ export class CharityFormComponent {
 
   showAllCharities() {
     this.database.getCharities().subscribe(response =>{
-
     this.charities = response;
     });
   }
