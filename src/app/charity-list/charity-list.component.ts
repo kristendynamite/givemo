@@ -15,6 +15,8 @@ export class CharityListComponent implements OnInit {
   show = false;
   selectedCharity = null;
   @Input() charities: any[];
+  favoriteCharities: FirebaseListObservable<any[]>;
+  // savedFavorites: any[] = [];
 
   constructor(private firebase: FirebaseService) { }
 
@@ -27,8 +29,18 @@ export class CharityListComponent implements OnInit {
   showDetails(charity) {
     this.show = true;
     this.selectedCharity = charity;
-
   }
+
+  // addFavorite(charityName: any[]) {
+  //   this.savedFavorites = [];
+  //   const addedFavorite = charityName.filter(name => )
+  // }
+  //
+  // determineClicked(item) {
+  //   for(var i = 0; i <= favoriteCharities.length; i++) {
+  //     if ()
+  //   }
+  // }
 
   ngOnInit() {
   }
