@@ -22,7 +22,20 @@ export class FirebaseService {
      return this.charities;
    }
 
+   getFavoriteCharities(){
+     return this.favoriteCharities;
+   }
+
    addCharity(newFavorite: UserFavorite) {
      this.favoriteCharities.push(newFavorite);
+   }
+
+   deleteCharity(selectedFavoriteCharity) {
+     let savedCharity = this.getCharityById(selectedFavoriteCharity.$key);
+     savedCharity.remove();
+   }
+
+   getCharityById(charityId:string){
+     return this.database.object('favoriteCharities/' + charityId);
    }
 }
