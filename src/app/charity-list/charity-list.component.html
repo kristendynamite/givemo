@@ -20,6 +20,49 @@
     <ng-container *ngIf="show && selectedCharity === charity">
       {{selectedCharity.mission}}
     </ng-container>
+
+    <div class="row">
+        <button (click)="myModal.open()">Donate</button>
+        <modal #myModal>
+            <modal-header>
+                <h1>Modal header</h1>
+            </modal-header>
+            <modal-content>
+              {{charity.charityName}}
+            </modal-content>
+            <modal-footer>
+                <button class="btn btn-primary" (click)="myModal.close()">close</button>
+            </modal-footer>
+        </modal>
+    </div>
+
+
+    <!-- <modal  title="Modal title"
+            cancelButtonLabel="cancel"
+            submitButtonLabel="submit"
+            modalClass="modal-lg modal-sm any-other-css-class"
+            [hideCloseButton]="true|false"
+            [closeOnEscape]="true|false"
+            [closeOnOutsideClick]="true|false"
+            (onOpen)="actionOnOpen()"
+            (onClose)="actionOnClose()"
+            (onSubmit)="actionOnSubmit()">
+
+        <modal-header>
+            Modal header content goes there.
+        </modal-header>
+
+        <modal-content>
+            Modal body content goes there.
+        </modal-content>
+
+        <modal-footer>
+            Modal footer content goes there.
+        </modal-footer>
+
+    </modal> -->
+
+
   </div>
 </div>
 <footer routerLink="../about">About</footer>
