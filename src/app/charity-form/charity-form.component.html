@@ -11,12 +11,18 @@
     <label for="name">Organization Name</label>
     <input #name>
   </div>
-  <input #category1 type="checkbox" name="isActive" value="1" >HealthCare<br>
-  <input #category2 type="checkbox" name="isActive" value="2">ChildrenServices<br>
+  <input #category1 type="checkbox" name="isActive" value="1">Animal<br>
+  <input #category2 type="checkbox" name="isActive" value="2">Art & Culture<br>
+  <input #category3 type="checkbox" name="isActive" value="3">Community<br>
+  <input #category4 type="checkbox" name="isActive" value="4">Education<br>
+  <input #category5 type="checkbox" name="isActive" value="5">Environment<br>
+  <input #category6 type="checkbox" name="isActive" value="6">Health<br>
+  <input #category7 type="checkbox" name="isActive" value="7">Human Rights<br>
+  <input #category8 type="checkbox" name="isActive" value="8">Human Service<br>
 
-  <button (click)="showCharities([category1, category2]);">Show charities</button>
+  <button (click)="showCharities([category1, category2, category3, category4, category5, category6, category7, category8]);">Show charities</button>
 
-  <button (click)="showAllCharities();">Get Result</button>
+  <button (click)="showCharityByName(name);">Get Result</button>
 </form>
 
 <!-- <div *ngIf="charities"> -->
