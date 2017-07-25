@@ -17,6 +17,7 @@
       <br>
       <i (click)="saveFavorite(charity.charityName)" class="fa fa-heart-o" aria-hidden="true"></i>
       <button (click)='showDetails(charity)' type="submit" name="button">More Info</button>
+      <button (click)='selectedCharity = ""' type="submit" name="button">Hide Info</button>
     </p>
     <ng-container *ngIf="show && selectedCharity === charity">
       {{selectedCharity.mission}}
