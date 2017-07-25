@@ -25,11 +25,15 @@ export class ProfileComponent implements OnInit {
   private userName: String;
   private userPhoto: String;
 
-  constructor(public authService: AuthenticationService, private router: Router, private database: FirebaseService) {
+  constructor(
+    public authService: AuthenticationService,
+    private router: Router,
+    private database: FirebaseService) {
 
     this.authService.user.subscribe(user =>  {
       if (user == null) {
         this.isLoggedIn = false;
+        this.router.navigate(['']);
       } else {
         this.isLoggedIn = true;
         this.userName = user.displayName;
