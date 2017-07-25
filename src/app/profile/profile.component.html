@@ -4,17 +4,18 @@
     <h1>{{title}}</h1>
     <img id="logo" src="../assets/logo.png">
   </div>
-  <i routerLink="../profile" class="fa fa-user" aria-hidden="true"></i>
+  <i routerLink="../profile" class="fa fa-user-circle-o" aria-hidden="true"></i>
 </nav>
 <div class="profile-card">
+  <button (click)="logout()">Logout</button>
   <p>{{userName}}</p>
-  <img src="{{userPhoto}}">
-
+  <div class="profile-photo">
+    <img src="{{userPhoto}}">
+  </div>
   <h3>Favorites</h3>
     <div *ngFor="let savedCharity of savedCharities | async">
       <p>{{savedCharity.charityName}}</p>
       <button (click)="deleteCharity(savedCharity)">Delete</button>
     </div>
   </div>
-<button (click)="logout()">Logout</button>
 <footer routerLink="../about">About</footer>
