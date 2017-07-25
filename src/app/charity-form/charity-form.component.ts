@@ -12,24 +12,32 @@ import { Observable } from 'rxjs/Observable';
 })
 export class CharityFormComponent {
 
-  charities: any[] = null;
-  // console.log(charities);
-
+  charities: any[] = [];
 
   constructor(private database: FirebaseService ) { }
 
-  // showCharities(name: string) {
-  //   this.database.getCharities().subscribe(response =>{
-  //   return this.charities = response.json();
-  //   });
-  // }
+  showCharities(categories: any[]) {
+    this.charities = [];
+    const checkedCategories = categories.filter(category => category.checked)
+    const checkedCategoryValues = checkedCategories.map(category =>
+    category.value)
+
+    console.log(checkedCategoryValues)
+    this.database.getCharities().subscribe(response =>{
+      // this.charities = response;
+      console.log(response)
+      for (let i = 0; i < response.length; i++) {
+        if (checkedCategoryValues.includes(response[i].category)) {
+          this.charities.push(response[i]);
+        }
+      }
+    });
+  }
 
   showAllCharities() {
     this.database.getCharities().subscribe(response =>{
 
-    console.log(response);
     this.charities = response;
-    console.log(this.charities);
     });
   }
 

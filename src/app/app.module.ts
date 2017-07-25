@@ -19,6 +19,7 @@ import { AuthGuard } from './auth-guard.service';
 import { AuthenticationService } from './authentication.service';
 import { CharityFormComponent } from './charity-form/charity-form.component';
 
+
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
@@ -36,7 +37,8 @@ export const firebaseConfig = {
     CharityListComponent,
     DonateComponent,
     FooterComponent,
-    CharityFormComponent
+    CharityFormComponent,
+
   ],
   imports: [
     BrowserModule,

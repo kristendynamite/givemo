@@ -3,12 +3,14 @@
     <label for="name">Organization Name</label>
     <input #name>
   </div>
+  <input #category1 type="checkbox" name="isActive" value="1" >HealthCare<br>
+  <input #category2 type="checkbox" name="isActive" value="2">ChildrenServices<br>
 
-  <button (click)="showCharities(name.value);">Get Result</button>
+  <button (click)="showCharities([category1, category2]);">Show charities</button>
+
+  <button (click)="showAllCharities();">Get Result</button>
 </form>
 
-<button (click)="showAllCharities();">Get Result</button>
-
-<div *ngIf="charities">
+<!-- <div *ngIf="charities"> -->
   <app-charity-list [charities]="charities"></app-charity-list>
-</div>
+<!-- </div> -->
