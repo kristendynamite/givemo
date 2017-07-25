@@ -37,21 +37,23 @@ export class CharityFormComponent {
     });
   }
 
-  // showCharityByName(name) {
-  //   this.charities = [];
-  //   console.log(this.charities);
-  //
-  //   const searchedCharityName = name.filter(names => names.charityName)
-  //   const foundCharityName = searchedCharityName.map(names => names.charityName)
-  //
-  //   this.database.getCharities().subscribe(response =>{
-  //     for (let i = 0; i < response.length; i++) {
-  //       if (foundCharityName.includes(response[i].charityName)) {
-  //        this.charities.push(response[i]);
-  //        console.log(response);
-  //       }
-  //     }
-  //   });
-  // }
+  showCharityByName(searchTerm) {
+    this.charities = [];
+    //console.log(this.charities);
+    //let searchFor = name;
+    //console.log(name);
+    //const searchedCharityName = name.filter(names)
+    //const foundCharityName = name.map(names => names.value)
+
+    this.database.getCharities().subscribe(response =>{
+      for (let i = 0; i < response.length; i++) {
+        if (response[i].charityName.toLowerCase().includes(searchTerm.toLowerCase())) {
+         this.charities.push(response[i]);
+//.split(" ").toLowerCase()
+
+        }
+      }
+    });
+  }
 
 }
