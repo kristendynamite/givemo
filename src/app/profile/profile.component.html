@@ -9,10 +9,12 @@
 <div class="profile-card">
   <p>{{userName}}</p>
   <img src="{{userPhoto}}">
+
   <h3>Favorites</h3>
     <div *ngFor="let savedCharity of savedCharities | async">
-      <p>{{favoriteCharities.charityName}}</p>
-      <button (click)="deleteCharity(savedCharity)">Delete Charity</button>
-</div>
+      <p>{{savedCharity.charityName}}</p>
+      <button (click)="deleteCharity(savedCharity)">Delete</button>
+    </div>
+  </div>
 <button (click)="logout()">Logout</button>
 <footer routerLink="../about">About</footer>

@@ -16,7 +16,7 @@ import { Observable } from 'rxjs/Observable';
 })
 export class ProfileComponent implements OnInit {
   title = 'givemo';
-  favoriteCharities: any[] = [];
+  // favoriteCharities: any[] = [];
 
   savedCharities: FirebaseListObservable <any[]> = null;
 
@@ -39,16 +39,16 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-  showFavoriteCharities() {
-    this.favoriteCharities = [];
-    this.database.getFavoriteCharities().subscribe(response =>{
-    this.favoriteCharities = response;
-    })
-  }
+  // showFavoriteCharities() {
+  //   this.favoriteCharities = [];
+  //   this.database.getFavoriteCharities().subscribe(response =>{
+  //   this.favoriteCharities = response;
+  //   })
+  // }
 
   ngOnInit() {
-    console.log(this.savedCharities);
     this.savedCharities = this.database.getFavoriteCharities();
+    console.log(this.savedCharities);
   }
 
   deleteCharity(selectedFavoriteCharity: UserFavorite) {
