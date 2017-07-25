@@ -18,6 +18,8 @@ import { masterFirebaseConfig } from './api-keys';
 import { AuthGuard } from './auth-guard.service';
 import { AuthenticationService } from './authentication.service';
 import { CharityFormComponent } from './charity-form/charity-form.component';
+import { ModalModule } from '../../node_modules/ng2-modal';
+import { ModalComponent } from './modal/modal.component';
 
 
 export const firebaseConfig = {
@@ -38,6 +40,7 @@ export const firebaseConfig = {
     DonateComponent,
     FooterComponent,
     CharityFormComponent,
+    ModalComponent,
 
   ],
   imports: [
@@ -48,6 +51,7 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    ModalModule
   ],
   providers: [AuthGuard, AuthenticationService],
   bootstrap: [AppComponent]

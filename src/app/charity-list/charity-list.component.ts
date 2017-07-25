@@ -3,6 +3,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 import { FirebaseService } from '../firebase.service';
 import { UserFavorite } from '../user-favorite.model';
 
+
 @Component({
   selector: 'app-charity-list',
   templateUrl: './charity-list.component.html',

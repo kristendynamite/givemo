@@ -14,8 +14,6 @@ export class CharityFormComponent {
 
   title = 'givemo';
   charities: any[] = [];
-  // console.log(charities);
-
 
   constructor(private database: FirebaseService ) { }
 
@@ -27,8 +25,6 @@ export class CharityFormComponent {
 
     console.log(checkedCategoryValues)
     this.database.getCharities().subscribe(response =>{
-      // this.charities = response;
-      console.log(response)
       for (let i = 0; i < response.length; i++) {
         if (checkedCategoryValues.includes(response[i].category)) {
           this.charities.push(response[i]);
@@ -39,18 +35,10 @@ export class CharityFormComponent {
 
   showCharityByName(searchTerm) {
     this.charities = [];
-    //console.log(this.charities);
-    //let searchFor = name;
-    //console.log(name);
-    //const searchedCharityName = name.filter(names)
-    //const foundCharityName = name.map(names => names.value)
-
     this.database.getCharities().subscribe(response =>{
       for (let i = 0; i < response.length; i++) {
         if (response[i].charityName.toLowerCase().includes(searchTerm.toLowerCase())) {
          this.charities.push(response[i]);
-//.split(" ").toLowerCase()
-
         }
       }
     });
