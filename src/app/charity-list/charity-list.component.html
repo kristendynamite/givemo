@@ -3,11 +3,24 @@
   <p>This is a test.</p>
 
   <div *ngFor="let charity of charities">
+
     <p>
       {{charity.charityName}}
+      <br>
+      {{charity.category}}
+      <br>
+      {{charity.websiteURL}}
+      <br>
+      {{charity.tag_line}}
+      <br>
+      {{charity.rating}}
+      <br>
       <i (click)="saveFavorite(charity.charityName)" class="fa fa-heart-o" aria-hidden="true"></i>
-
+      <button (click)='showDetails(charity)' type="submit" name="button">More Info</button>
     </p>
+    <ng-container *ngIf="show && selectedCharity === charity">
+      {{selectedCharity.mission}}
+    </ng-container>
   </div>
 </div>
 <footer routerLink="../about">About</footer>

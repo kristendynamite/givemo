@@ -11,7 +11,8 @@ import { UserFavorite } from '../user-favorite.model';
 })
 export class CharityListComponent implements OnInit {
   title = 'givemo';
-
+  show = false;
+  selectedCharity = null;
   @Input() charities: any[];
 
   constructor(private firebase: FirebaseService) { }
@@ -21,6 +22,11 @@ export class CharityListComponent implements OnInit {
     let newUserFavorite: UserFavorite = new UserFavorite(charityName);
     this.firebase.addCharity(newUserFavorite);
     console.log(newUserFavorite);
+  }
+  showDetails(charity) {
+    this.show = true;
+    this.selectedCharity = charity;
+
   }
 
   ngOnInit() {
