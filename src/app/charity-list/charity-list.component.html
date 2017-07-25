@@ -1,13 +1,7 @@
 <div class="card-body">
-  <h3>categories</h3>
-  <p>This is a test.</p>
-
+<h3>categories</h3>
   <div *ngFor="let charity of charities">
-    <p>
-      {{charity.charityName}}
-      <i (click)="saveFavorite(charity.charityName)" class="fa fa-heart-o" aria-hidden="true"></i>
-
-    </p>
+    <p>{{charity.charityName}}<i (click)="saveFavorite(charity.charityName)" class="fa fa-heart-o" aria-hidden="true"></i></p>
   </div>
 </div>
 <footer routerLink="../about">About</footer>
