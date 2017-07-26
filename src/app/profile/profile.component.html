@@ -1,21 +1,45 @@
 <nav>
   <i routerLink="../charity-form" class="fa fa-search" aria-hidden="true"></i>
   <div class="site-logo">
-    <h1>{{title}}</h1>
     <img id="logo" src="../assets/logo.png">
+    <h1>{{title}}</h1>
   </div>
   <i routerLink="../profile" class="fa fa-user-circle-o" aria-hidden="true"></i>
 </nav>
-<div class="profile-card">
-  <button (click)="logout()">Logout</button>
-  <p>{{userName}}</p>
-  <div class="profile-photo">
-    <img src="{{userPhoto}}">
-  </div>
-  <h3>Favorites</h3>
-    <div *ngFor="let savedCharity of savedCharities | async">
-      <p>{{savedCharity.charityName}}</p>
-      <button (click)="deleteCharity(savedCharity)">Delete</button>
+<div class="profile-holder">
+  <div class="profile-card">
+    <div class="log-out-holder">
+      <p class="log-out" (click)="logout()">Log out</p>
+    </div>
+    <div class="profile-header">
+      <div class="profile-photo">
+        <img src="{{userPhoto}}">
+      </div>
+      <div class="profile-info">
+        <h3>{{userName}}</h3>
+        <p>Total Donated: $--</p>
+        <p>Joined: July 23, 2017</p>
+      </div>
+    </div>
+    <div class="find-cause-holder">
+      <h3 class="find-cause-button" routerLink="../charity-form">Find a cause</h3>
+    </div>
+    <div class="favorite-causes-title">
+      <i class="fa fa-heart" aria-hidden="true"></i>
+      <h3>Favorite Causes</h3>
+    </div>
+    <div class="favorite-causes-list" *ngFor="let savedCharity of savedCharities | async">
+      <h4>{{savedCharity.charityName}}</h4>
+      <div class="favorites-donation-section">
+        <p>Total donations: $--</p>
+        <button (click)="d">Donate</button>
+        <button (click)="deleteCharity(savedCharity)">Remove</button>
+      </div>
+      <hr>
     </div>
   </div>
-<footer routerLink="../about">About</footer>
+</div>
+<footer>
+  <p routerLink="../about">about</p>
+  <p>givemo <i class="fa fa-copyright" aria-hidden="true"></i> 2017</p>
+</footer>

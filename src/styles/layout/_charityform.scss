@@ -1,0 +1,54 @@
+form {
+  margin: 10px 10px 0 10px;
+  border-radius: 5px;
+  padding: 10px 5px;
+  color: $vintage;
+  .form-group {
+    position: relative;
+    .search-input {
+      background: transparent;
+      border: solid 2px $vintage;
+      border-radius: 500px;
+      padding: 15px 10px 10px 10px;
+      width: 90vw;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: rgba(255, 250, 240, 0.5);
+        text-transform: uppercase;
+        font-family: 'Catamaran', sans-serif;
+        font-size: 20px;
+      }
+    }
+    i {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 20px;
+    }
+  }
+  .cause-checkboxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    input[type=checkbox] {
+      display:none;
+    }
+    label {
+      padding: 7px 10px 4px 10px;
+      margin: 5px;
+      border: 2px solid $vintage;
+      border-radius: 500px;
+      font-family: 'Catamaran', sans-serif;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+    input:checked + label {
+      background: $gold;
+      border-color: $gold;
+    }
+  }
+}
