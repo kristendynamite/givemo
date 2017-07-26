@@ -13,10 +13,12 @@ import { UserFavorite } from '../user-favorite.model';
 export class CharityListComponent implements OnInit {
   title = 'givemo';
   show = false;
+  category = "";
   selectedCharity = null;
   @Input() charities: any[];
   favoriteCharities: FirebaseListObservable<any[]>;
   // savedFavorites: any[] = [];
+
 
   constructor(private firebase: FirebaseService) { }
 
@@ -31,24 +33,16 @@ export class CharityListComponent implements OnInit {
     this.selectedCharity = charity;
   }
 
-  showCategory(category: string) {
-    if (category === "1"){
-      category = "animal"
-    }
-  }
 
-  // addFavorite(charityName: any[]) {
-  //   this.savedFavorites = [];
-  //   const addedFavorite = charityName.filter(name => )
-  // }
-  //
-  // determineClicked(item) {
-  //   for(var i = 0; i <= favoriteCharities.length; i++) {
-  //     if ()
-  //   }
-  // }
 
   ngOnInit() {
+
+    // showCategory(category: string) {
+    //   if (category === "1"){
+    //     this.category = "Animal"
+    //   }
+    // };
+
   }
 
 }

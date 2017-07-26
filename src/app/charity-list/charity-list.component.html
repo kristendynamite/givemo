@@ -4,7 +4,7 @@
       <h4>{{charity.charityName}}</h4>
       <i (click)="saveFavorite(charity.charityName)" class="fa fa-heart-o" aria-hidden="true"></i>
       <p>{{charity.category}}</p>
-      <p>{{charity.websiteURL}}</p>
+      <a href="{{charity.websiteURL}}">Visit Website</a>
       <p>{{charity.tag_line}}</p>
       <p>Rating: {{charity.rating}}</p>
       <button (click)='showDetails(charity)' type="submit" name="button">More Info</button>
