@@ -15,6 +15,24 @@
       margin: 0;
       width: 70%;
     }
+    .modal-container {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      .modal {
+        background-color: $cool-blue;
+        color: $vintage;
+        &::before {
+          padding: 20px;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
     i {
       position: absolute;
       left: 285px;
