@@ -7,7 +7,6 @@ nav {
   justify-content: space-around;
   padding: 10px 0;
   background: $vintage;
-
   i {
     color: $grey;
     &:focus {
@@ -25,8 +24,8 @@ nav {
     align-items: center;
     justify-content: center;
     #logo {
-      height: 35px;
-      margin-left: 10px;
+      height: 30px;
+      margin-right: 5px;
     }
   }
 }

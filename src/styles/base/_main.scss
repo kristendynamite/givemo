@@ -6,12 +6,15 @@
 //   padding: 0;
 // }
 
-body {
-  margin: 0;
-  padding: 0;
+html {
   background: linear-gradient(45deg, darken($gold, 10%), lighten($cool-blue, 20%));
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
+  padding-bottom: 80px;
+  body {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 app-root {

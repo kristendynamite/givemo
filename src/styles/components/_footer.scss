@@ -1,0 +1,19 @@
+footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $vintage;
+  text-transform: lowercase;
+  display: flex;
+  justify-content: space-between;
+  p:first-of-type {
+    margin-left: 10px;
+    &:focus {
+      outline: none;
+    }
+  }
+  p:last-of-type {
+    margin-right: 10px;
+  }
+}
