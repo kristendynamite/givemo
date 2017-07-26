@@ -24,7 +24,7 @@
       </div>
       <i (click)="saveFavorite(charity.charityName)" class="fa fa-heart-o" aria-hidden="true"></i>
       <p>{{charity.category}}</p>
-      <p>{{charity.websiteURL}}</p>
+      <a href="{{charity.websiteURL}}">Visit Website</a>
       <p>{{charity.tag_line}}</p>
       <p>Rating: {{charity.rating}} out of 4</p>
       <div class="charity-card-buttons">
