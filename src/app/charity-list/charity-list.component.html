@@ -2,28 +2,44 @@
   <div *ngFor="let charity of charities">
     <div class="charities">
       <h4>{{charity.charityName}}</h4>
+      <div class="modal-container">
+        <modal class="modal" #myModal>
+          <modal-header>
+            <h2>Make a donation</h2>
+          </modal-header>
+          <modal-content>
+            {{charity.charityName}}
+            <input placeholder="amount">
+            <select>
+              <option value=""></option>
+              <option value="">Daily</option>
+              <option value="">Monthly</option>
+              <option value="">Annually</option>
+            </select>
+          </modal-content>
+          <modal-footer>
+            <button class="btn btn-primary" (click)="myModal.close()">close</button>
+          </modal-footer>
+        </modal>
+      </div>
       <i (click)="saveFavorite(charity.charityName)" class="fa fa-heart-o" aria-hidden="true"></i>
       <p>{{charity.category}}</p>
       <a href="{{charity.websiteURL}}">Visit Website</a>
       <p>{{charity.tag_line}}</p>
-      <p>Rating: {{charity.rating}}</p>
-      <button (click)='showDetails(charity)' type="submit" name="button">More Info</button>
-      <button (click)='selectedCharity = ""' type="submit" name="button">Hide Info</button>
-      <ng-container *ngIf="show && selectedCharity === charity">
-        {{selectedCharity.mission}}
-      </ng-container>
-      <button (click)="myModal.open()">Donate</button>
+      <p>Rating: {{charity.rating}} out of 4</p>
+      <div class="charity-card-buttons">
+        <button (click)='showDetails(charity)' type="submit" name="button">More Info</button>
+        <button (click)="myModal.open()">Donate</button>
+      </div>
+      <br>
     </div>
-    <modal #myModal>
-      <modal-header>
-        <h1>Modal header</h1>
-      </modal-header>
-      <modal-content>
-        {{charity.charityName}}
-      </modal-content>
-      <modal-footer>
-        <button class="btn btn-primary" (click)="myModal.close()">close</button>
-      </modal-footer>
-    </modal>
+    <ng-container *ngIf="show && selectedCharity === charity">
+      <div class="charity-more-info">
+        <p>Mission</p>
+        <p>{{selectedCharity.mission}}</p>
+        <p (click)='selectedCharity = ""' type="submit" name="button">X</p>
+      </div>
+    </ng-container>
+
   </div>
 </div>
