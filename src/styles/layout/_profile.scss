@@ -1,10 +1,91 @@
-.profile-card {
-  width: 70vw;
-  img {
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    object-fit: cover;
-    object-position: top;
+.profile-holder {
+  display: flex;
+  justify-content: center;
+  .profile-card {
+    background-color: $vintage;
+    border-radius: 5px;
+    width: 85vw;
+    margin-top: 30px;
+    padding: 10px;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, .5);
+    .log-out-holder {
+      display: flex;
+      justify-content: flex-end;
+      .log-out {
+        text-transform: lowercase;
+        border: solid $grey 1px;
+        padding: 4px 10px;
+        border-radius: 500px;
+        font-size: .7em;
+        margin-right: 10px;
+      }
+    }
+    img {
+      @include size(80px);
+      border-radius: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+    .profile-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .profile-info {
+        margin-left: 10px;
+        h3 {
+          margin: 0 0 5px 0;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+    .find-cause-holder {
+      display: flex;
+      justify-content: center;
+      .find-cause-button {
+        padding: 4px 10px;
+        border-radius: 500px;
+        border: solid $grey 2px;
+      }
+    }
+    .favorite-causes-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h3 {
+        margin-left: 5px;
+      }
+    }
+    .favorite-causes-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h4 {
+        margin: 10px 0 0 0;
+      }
+      .favorites-donation-section {
+        p {
+          margin: 0;
+        }
+        button {
+          text-transform: lowercase;
+          border: solid $grey 1px;
+          padding: 4px 10px;
+          border-radius: 500px;
+          background: transparent;
+          margin: 10px 0;
+          &:focus {
+            outline: none;
+          }
+          &:first-of-type {
+            margin-right: 10px;
+          }
+        }
+      }
+      hr {
+        width: 70%;
+      }
+    }
   }
 }

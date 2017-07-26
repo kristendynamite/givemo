@@ -13,28 +13,26 @@
       <br>
       {{charity.rating}}
       <br>
-      <i (click)="saveFavorite(charity.charityName)" [class]="determineClicked(item)" class="fa fa-heart-o" aria-hidden="true"></i>
+      <i (click)="saveFavorite(charity.charityName)" class="fa fa-heart-o" aria-hidden="true"></i>
       <button (click)='showDetails(charity)' type="submit" name="button">More Info</button>
       <button (click)='selectedCharity = ""' type="submit" name="button">Hide Info</button>
     </p>
     <ng-container *ngIf="show && selectedCharity === charity">
       {{selectedCharity.mission}}
     </ng-container>
+    <button (click)="myModal.open()">Donate</button>
+    <modal #myModal>
+      <modal-header>
+        <h1>Modal header</h1>
+      </modal-header>
+      <modal-content>
+        {{charity.charityName}}
+      </modal-content>
+      <modal-footer>
+        <button class="btn btn-primary" (click)="myModal.close()">close</button>
+      </modal-footer>
+    </modal>
 
-    <div class="row">
-        <button (click)="myModal.open()">Donate</button>
-        <modal #myModal>
-            <modal-header>
-                <h1>Modal header</h1>
-            </modal-header>
-            <modal-content>
-              {{charity.charityName}}
-            </modal-content>
-            <modal-footer>
-                <button class="btn btn-primary" (click)="myModal.close()">close</button>
-            </modal-footer>
-        </modal>
-    </div>
 
 
     <!-- <modal  title="Modal title"
@@ -65,4 +63,4 @@
 
   </div>
 </div>
-<footer routerLink="../about">About</footer>
+<!-- <footer routerLink="../about">About</footer> -->
