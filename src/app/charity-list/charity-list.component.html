@@ -13,7 +13,7 @@
       <br>
       {{charity.rating}}
       <br>
-      <i (click)="saveFavorite(charity.charityName)" [class]="determineClicked(item)" class="fa fa-heart-o" aria-hidden="true"></i>
+      <i (click)="saveFavorite(charity.charityName)" class="fa fa-heart-o" aria-hidden="true"></i>
       <button (click)='showDetails(charity)' type="submit" name="button">More Info</button>
       <button (click)='selectedCharity = ""' type="submit" name="button">Hide Info</button>
     </p>
@@ -29,6 +29,7 @@
             </modal-header>
             <modal-content>
               {{charity.charityName}}
+
             </modal-content>
             <modal-footer>
                 <button class="btn btn-primary" (click)="myModal.close()">close</button>
