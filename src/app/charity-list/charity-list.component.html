@@ -1,26 +1,19 @@
 <div class="card-body">
-<h3>categories</h3>
   <div *ngFor="let charity of charities">
-
-    <p>
-      {{charity.charityName}}
-      <br>
-      {{charity.category}}
-      <br>
-      <a href ="{{charity.websiteURL}}">Visit Website</a>
-      <br>
-      {{charity.tag_line}}
-      <br>
-      {{charity.rating}}
-      <br>
+    <div class="charities">
+      <h4>{{charity.charityName}}</h4>
       <i (click)="saveFavorite(charity.charityName)" class="fa fa-heart-o" aria-hidden="true"></i>
+      <p>{{charity.category}}</p>
+      <p>{{charity.websiteURL}}</p>
+      <p>{{charity.tag_line}}</p>
+      <p>Rating: {{charity.rating}}</p>
       <button (click)='showDetails(charity)' type="submit" name="button">More Info</button>
       <button (click)='selectedCharity = ""' type="submit" name="button">Hide Info</button>
-    </p>
-    <ng-container *ngIf="show && selectedCharity === charity">
-      {{selectedCharity.mission}}
-    </ng-container>
-    <button (click)="myModal.open()">Donate</button>
+      <ng-container *ngIf="show && selectedCharity === charity">
+        {{selectedCharity.mission}}
+      </ng-container>
+      <button (click)="myModal.open()">Donate</button>
+    </div>
     <modal #myModal>
       <modal-header>
         <h1>Modal header</h1>
@@ -32,33 +25,5 @@
         <button class="btn btn-primary" (click)="myModal.close()">close</button>
       </modal-footer>
     </modal>
-
-    <!-- <modal  title="Modal title"
-            cancelButtonLabel="cancel"
-            submitButtonLabel="submit"
-            modalClass="modal-lg modal-sm any-other-css-class"
-            [hideCloseButton]="true|false"
-            [closeOnEscape]="true|false"
-            [closeOnOutsideClick]="true|false"
-            (onOpen)="actionOnOpen()"
-            (onClose)="actionOnClose()"
-            (onSubmit)="actionOnSubmit()">
-
-        <modal-header>
-            Modal header content goes there.
-        </modal-header>
-
-        <modal-content>
-            Modal body content goes there.
-        </modal-content>
-
-        <modal-footer>
-            Modal footer content goes there.
-        </modal-footer>
-
-    </modal> -->
-
-
   </div>
 </div>
-<!-- <footer routerLink="../about">About</footer> -->
