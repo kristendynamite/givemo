@@ -7,13 +7,19 @@
       <p>{{charity.websiteURL}}</p>
       <p>{{charity.tag_line}}</p>
       <p>Rating: {{charity.rating}}</p>
-      <button (click)='showDetails(charity)' type="submit" name="button">More Info</button>
-      <button (click)='selectedCharity = ""' type="submit" name="button">Hide Info</button>
-      <ng-container *ngIf="show && selectedCharity === charity">
-        {{selectedCharity.mission}}
-      </ng-container>
-      <button (click)="myModal.open()">Donate</button>
+      <div class="charity-card-buttons">
+        <button (click)='showDetails(charity)' type="submit" name="button">More Info</button>
+        <button (click)="myModal.open()">Donate</button>
+      </div>
+      <br>
     </div>
+    <ng-container *ngIf="show && selectedCharity === charity">
+      <div class="charity-more-info">
+        <p>Mission</p>
+        <p>{{selectedCharity.mission}}</p>
+        <p (click)='selectedCharity = ""' type="submit" name="button">X</p>
+      </div>
+    </ng-container>
     <modal #myModal>
       <modal-header>
         <h1>Modal header</h1>
