@@ -31,6 +31,12 @@ export class CharityListComponent implements OnInit {
     this.selectedCharity = charity;
   }
 
+  showCategory(category: string) {
+    if (category === "1"){
+      category = "animal"
+    }
+  }
+
   // addFavorite(charityName: any[]) {
   //   this.savedFavorites = [];
   //   const addedFavorite = charityName.filter(name => )
