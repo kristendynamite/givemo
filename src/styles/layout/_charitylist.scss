@@ -1,6 +1,13 @@
 .card-body {
-  background-color: $vintage;
+  background-color: transparent;
   margin: 10px 10px;
   padding: 5px;
   text-align: center;
+  .charities {
+    background-color: $vintage;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
 }
