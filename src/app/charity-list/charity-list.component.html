@@ -4,9 +4,12 @@
       <h4>{{charity.charityName}}</h4>
 
       <!-- this is not being implemented yet, but will trigger the heart to toggle on and off -->
-      <div *ngIf="firebase.charityIsFavorited(charity.charityName)">
+      <!-- <div *ngIf="firebase.charityIsFavorited(charity.charityName)"> -->
+
+
         <i (click)="saveFavorite(charity.charityName);" class="fa fa-heart-o" aria-hidden="true"></i>
-      </div>
+
+      <!-- </div> -->
 
 
 
@@ -52,13 +55,6 @@
         </div>
       </div>
 
-      <!-- <p>Rating: {{charity.rating}}</p> -->
-      <button (click)='showDetails(charity)' type="submit" name="button">More Info</button>
-      <button (click)='selectedCharity = ""' type="submit" name="button">Hide Info</button>
-      <ng-container *ngIf="show && selectedCharity === charity">
-        {{selectedCharity.mission}}
-      </ng-container>
-      <button (click)="myModal.open()">Donate</button>
       <div class="modal-container">
         <modal class="modal" #myModal>
           <modal-header>
@@ -79,11 +75,6 @@
           </modal-footer>
         </modal>
       </div>
-      <i (click)="saveFavorite(charity.charityName)" class="fa fa-heart-o" aria-hidden="true"></i>
-      <p>{{charity.category}}</p>
-      <a href="{{charity.websiteURL}}">Visit Website</a>
-      <p>{{charity.tag_line}}</p>
-      <p>Rating: {{charity.rating}} out of 4</p>
       <div class="charity-card-buttons">
         <button (click)='showDetails(charity)' type="submit" name="button">More Info</button>
         <button (click)="myModal.open()">Donate</button>
