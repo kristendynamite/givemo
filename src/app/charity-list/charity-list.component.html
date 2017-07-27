@@ -44,18 +44,18 @@
         <div>Human Services</div>
       </div>
       <a href="{{charity.websiteURL}}">Visit Website</a>
-      <p>{{charity.tag_line}}</p>
+      <div>{{charity.tag_line}}</div>
 
       <div *ngIf="charity.rating == 3">
-        <div> Rating: <p class="fa fa-heart-o"></p><p class="fa fa-heart-o"></p><p class="fa fa-heart-o"></p>
+        <div> Rating: <p class="fa fa-circle" aria-hidden="true"></p><p class="fa fa-circle" aria-hidden="true"></p><p class="fa fa-circle" aria-hidden="true"></p><p class="fa fa-circle-o" aria-hidden="true"></p>
         </div>
       </div>
       <div *ngIf="charity.rating == 4">
-        <div> Rating:<p class="fa fa-heart-o"></p><p class="fa fa-heart-o"></p><p class="fa fa-heart-o"></p><p class="fa fa-heart-o"></p>
+        <div> Rating:<p class="fa fa-circle" aria-hidden="true"></p><p class="fa fa-circle" aria-hidden="true"></p><p class="fa fa-circle" aria-hidden="true"></p><p class="fa fa-circle" aria-hidden="true"></p>
         </div>
       </div>
 
-      <div class="modal-container">
+      <!-- <div style="box-shadow: 10px 10px 127px 67px rgba(68,68,68,0.83);" class="modal-container">
         <modal class="modal" #myModal>
           <modal-header>
             <h2>Make a donation</h2>
@@ -74,20 +74,36 @@
             <button class="btn btn-primary" (click)="myModal.close()">close</button>
           </modal-footer>
         </modal>
-      </div>
+      </div> -->
       <div class="charity-card-buttons">
         <button (click)='showDetails(charity)' type="submit" name="button">More Info</button>
-        <button (click)="myModal.open()">Donate</button>
+        <button (click)='showDonate(charity)' type="submit" name="button">Donate</button>
       </div>
       <br>
     </div>
-    <ng-container *ngIf="show && selectedCharity === charity">
+    <ng-container *ngIf="(show && selectedCharity === charity)">
       <div class="charity-more-info">
         <p>Mission</p>
         <p>{{selectedCharity.mission}}</p>
-        <p (click)='selectedCharity = ""' type="submit" name="button">X</p>
+        <p (click)='selectedCharity = ""'>X</p>
       </div>
     </ng-container>
-
+    <ng-container class="donate-container" *ngIf="(donate && selectedCharity === charity)">
+      <div class="donation-slide">
+        <p>Make a donation</p>
+        <h4>{{charity.charityName}}</h4>
+        <label>Amount: $</label>
+        <input #dollar id="dollar-input" type="number">
+        <form>
+          <input checked="checked" type="radio" name="frequency" value="once">Once<br>
+          <input type="radio" name="frequency" value="monthly">Monthly<br>
+          <input type="radio" name="frequency" value="annually">Annually<br>
+        </form>
+        <div class="button-container">
+          <button type="submit" name="button" (click)="dollar.value=''">submit donation</button>
+        </div>
+        <p (click)='selectedCharity = ""'>X</p>
+      </div>
+    </ng-container>
   </div>
 </div>

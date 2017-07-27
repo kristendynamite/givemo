@@ -13,26 +13,22 @@ import { UserFavorite } from '../user-favorite.model';
 export class CharityListComponent implements OnInit {
   title = 'givemo';
   show = false;
+  donate = false;
   category = "";
   selectedCharity = null;
+  // selectedDonate = null;
 
   @Input() charities: any[];
   @Input() favoriteCharities: any[];
 
-  // favoriteCharities: FirebaseListObservable<any[]>;
   savedFavorites: any[] = [];
 
 
   constructor(private firebase: FirebaseService) { }
 
   saveFavorite(charityName: string) {
-    console.log(charityName);
-
     let newUserFavorite: UserFavorite = new UserFavorite(charityName);
     this.firebase.addCharity(newUserFavorite);
-    
-    console.log(newUserFavorite);
-    console.log(this.favoriteCharities);
   }
 
   // toggleSavedCharityIcon(favoritedCharity: string) {
@@ -41,6 +37,13 @@ export class CharityListComponent implements OnInit {
 
   showDetails(charity) {
     this.show = true;
+    this.donate = false;
+    this.selectedCharity = charity;
+  }
+
+  showDonate(charity) {
+    this.show = false;
+    this.donate = true;
     this.selectedCharity = charity;
   }
 
