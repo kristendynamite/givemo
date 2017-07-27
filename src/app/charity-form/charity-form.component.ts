@@ -14,17 +14,20 @@ export class CharityFormComponent {
 
   title = 'givemo';
   charities: any[] = [];
+  allCharities = null;
 
-  constructor(private database: FirebaseService ) { }
+  constructor(private database: FirebaseService ) {
+    this.allCharities = database.charities;
+  }
 
   showCharities(categories: any[]) {
-    this.charities = [];
     const checkedCategories = categories.filter(category => category.checked)
     const checkedCategoryValues = checkedCategories.map(category =>
     category.value)
 
     console.log(checkedCategoryValues)
     this.database.getCharities().subscribe(response =>{
+      this.charities = [];
       for (let i = 0; i < response.length; i++) {
         if (checkedCategoryValues.includes(response[i].category)) {
           this.charities.push(response[i]);

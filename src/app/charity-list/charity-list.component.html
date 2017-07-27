@@ -3,21 +3,14 @@
     <div class="charities">
       <h4>{{charity.charityName}}</h4>
 
-      <!-- this is not being implemented yet, but will trigger the heart to toggle on and off -->
-      <!-- <div *ngIf="firebase.charityIsFavorited(charity.charityName)"> -->
+      <!-- this is not being implemented yet, but will trigger the heart to toggle off -->
+      <div *ngIf="!charity.favorited">
+        <i (click)="saveFavorite(charity);" class="fa fa-heart-o" aria-hidden="true"></i>
+      </div>
+      <div *ngIf="charity.favorited">
+        <i (click)="saveFavorite(charity);" class="fa fa-heart" aria-hidden="true"></i>
+      </div>
 
-
-        <i (click)="saveFavorite(charity.charityName);" class="fa fa-heart-o" aria-hidden="true"></i>
-
-      <!-- </div> -->
-
-
-
-      <!-- </div> -->
-
-        <!-- <div *ngIf"charity.charityName == favoriteCharities.charityName"> -->
-        <!-- <i (click)="saveFavorite(charity.charityName)" class="fa fa-heart-o" aria-hidden="true"></i>
-      <! </div> -->
 
       <div *ngIf="charity.category == 1">
         <div>Animal</div>
