@@ -5,7 +5,7 @@
 #### By _Kristen McKee, Connor Larsen, Nick Wise and, Guy Anderson 7/27/2017_
 
 ## Description
-
+To view the Website go to https://givemo-6e37c.firebaseapp.com and log into your google account.
 
 ## Specs
 | Behavior | Input | Output |
