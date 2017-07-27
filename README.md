@@ -45,9 +45,9 @@
 ## Screenshots of Application
 
 Screenshots
-![alt text](https://github.com/kristendynamite/givemo/blob/master/src/assets/splash_screen.jpg?raw=true)
-![alt text](https://github.com/kristendynamite/givemo/blob/master/src/assets/profile_page.jpg?raw=true)
-![alt text](https://github.com/kristendynamite/givemo/blob/master/src/assets/search_page.jpg?raw=true)
+![alt text](https://github.com/kristendynamite/givemo/blob/master/src/assets/splash_screen.png?raw=true)
+![alt text](https://github.com/kristendynamite/givemo/blob/master/src/assets/profile_page.png?raw=true)
+![alt text](https://github.com/kristendynamite/givemo/blob/master/src/assets/search_page.png?raw=true)
 
 
 Style guide for application
