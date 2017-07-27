@@ -38,9 +38,9 @@ export class CharityListComponent implements OnInit {
 
   }
 
-  // unFavorite(selectedFavoriteCharity: UserFavorite) {
-  //   this.firebase.unFavorite(selectedFavoriteCharity);
-  // }
+  unFavorite(selectedFavoriteCharity: UserFavorite) {
+    this.firebase.unFavorite(selectedFavoriteCharity);
+  }
 
   showDetails(charity) {
     this.show = true;

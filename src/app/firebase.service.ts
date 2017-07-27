@@ -47,15 +47,15 @@ export class FirebaseService {
    //```````not working method yet ````````
 
 
-  //  unFavorite(selectedFavoriteCharity) {
-  //    let savedCharity = this.getCharityById(selectedFavoriteCharity.$key);
-  //    savedCharity.remove();
-   //
-  //    this.getCharityByName(selectedFavoriteCharity.charityName).subscribe(data => {
-  //      const charityKey: string = data[0].$key;
-  //      this.getCharityFavoriteById(charityKey).set(true);
-  //    });
-  //  }
+   unFavorite(selectedFavoriteCharity) {
+     let savedCharity = this.getCharityById(selectedFavoriteCharity.$key);
+     savedCharity.remove();
+
+     this.getCharityByName(selectedFavoriteCharity.charityName).subscribe(data => {
+       const charityKey: string = data[0].$key;
+       this.getCharityFavoriteById(charityKey).set(false);
+     });
+   }
 
    getCharityById(charityName:string){
      return this.database.object('favoriteCharities/' + charityName);
@@ -64,5 +64,6 @@ export class FirebaseService {
    getCharityFavoriteById(favoritedId: string){
      return this.database.object('charities/' + favoritedId + '/favorited');
    }
+
 
 }
