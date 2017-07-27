@@ -32,10 +32,27 @@
       <h4>{{savedCharity.charityName}}</h4>
       <div class="favorites-donation-section">
         <p>Total donations: $50</p>
-        <button (click)="d">Donate</button>
+        <button (click)='showDonate(charity)'>Donate</button>
         <button (click)="deleteCharity(savedCharity)">Remove</button>
       </div>
       <hr>
+      <ng-container class="donate-container" *ngIf="(donate && selectedCharity === charity)">
+        <div class="donation-slide">
+          <p>Make a donation</p>
+          <h4>{{charity.charityName}}</h4>
+          <label>Amount: $</label>
+          <input #dollar id="dollar-input" type="number">
+          <form>
+            <input checked="checked" type="radio" name="frequency" value="once">Once<br>
+            <input type="radio" name="frequency" value="monthly">Monthly<br>
+            <input type="radio" name="frequency" value="annually">Annually<br>
+          </form>
+          <div class="button-container">
+            <button type="submit" name="button" (click)="dollar.value=''">submit donation</button>
+          </div>
+          <p (click)='selectedCharity = ""'>X</p>
+        </div>
+      </ng-container>
     </div>
   </div>
 </div>
