@@ -16,6 +16,9 @@ import { Observable } from 'rxjs/Observable';
 })
 export class ProfileComponent implements OnInit {
   title = 'givemo';
+  show = false;
+  donate = false;
+  selectedCharity = null;
   // favoriteCharities: any[] = [];
 
   savedCharities: FirebaseListObservable <any[]> = null;
@@ -49,6 +52,12 @@ export class ProfileComponent implements OnInit {
   //   this.favoriteCharities = response;
   //   })
   // }
+
+  showDonate(charity) {
+    this.show = false;
+    this.donate = true;
+    this.selectedCharity = charity;
+  }
 
   ngOnInit() {
     this.savedCharities = this.database.getFavoriteCharities();
