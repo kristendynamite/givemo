@@ -1,4 +1,4 @@
-# _Givemo - A mobile charity donation app_
+# _Givemo - A mobile friendly charity donation app_
 
 #### Angular2 - Group Week Project
 
@@ -40,8 +40,6 @@
 | Add charity to favorites button (open heart icon) | Click | Charity will now be displayed on user profile page. |
 | Once a charity has been added to favorites, the add to favorite button will change to a red heart. | None | Red heart. |
 | Remove from favorites. | Click the Add to favorites button a second time. | Charity will be removed from user profile page. |
-|  |  |  |
-|  |  |  |
 
 
 ## Screenshots of Application
@@ -54,26 +52,30 @@ Style guide for application
 
 
 
-![alt text](https://github.com/conesgnomes/pdx-supper-club/blob/master/src/assets/desktop_home.png)
-
-## Database Setup
-
-
-* Select *File > Open > File* and select your database of choice from the root directory (social_media.sql for running the application, or social_media_test.sql for running tests)
-
-* If the database does not already exist, add the following lines to the top of the script file:
-
-  `CREATE DATABASE [your_database_name];`
-
-  `GO`
-
-
-* Navigate to `localhost:4200` in your web browser to view the application
-
-
 ## Setup/Installation Requirements
 
-## How to Use
+* _Go to Github repository page, search for givemo._
+* _Click the "download or clone" button and copy the link to givemo_
+* _In your computers terminal type "git clone" & paste the copied link._
+* _CD into givemo_
+* _Open in atom_
+* _In terminal run... _
+* _$ npm install_
+* _$ bower init_
+* _$ bower install_
+* _go to https://firebase.google.com/ and follow their instructions for getting an API key_
+* _create a new file called api-keys.ts in the src/app directory. Copy the code from Firebase into it. Follow the example code below._
+
+* _export var masterFirebaseConfig = {_
+* _apiKey: "xxxx",_
+* _authDomain: "xxxx.firebaseapp.com",_
+* _databaseURL: "https://xxxx.firebaseio.com",_
+* _storageBucket: "xxxx.appspot.com",_
+* _ messagingSenderId: "xxxx"_
+* _};_
+* _$ ng serve_
+* _open localhost:4200 in web browser_
+
 
 ## Known Bugs
 
@@ -93,11 +95,6 @@ Style guide for application
 * TypeScript
 * Bower
 
-
-
-## Acknowledgments
-
-
 ## License
 
 This project is licensed under the MIT License
@@ -114,23 +111,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
 
 ## Further help
 
