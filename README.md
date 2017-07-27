@@ -13,7 +13,7 @@
 | Application will start at a user login screen. | None | Sign in entry fields. |
 | Sign in with a Google account. | Text username and password. | Application will take user to profile view. |
 | User Profile View will have Profile Picture imported from Google, User Name, Total Donation Amount, Joined Date, Favorite Causes, and buttons for Log Out, and Find a Cause. | See below. | See below. |
-| Nave bar will be present on all views and will have buttons for Search, About, and Profile. | Click | See below. |
+| Nav bar will be present on all views and will have buttons for Search, About, and Profile. | Click | See below. |
 | Log Out button. | Click | Will log the user out and return to Log In screen. |
 | About button. | Click | Will take user to about page. |
 | About page will display information about Givemo and the individual developers. | None | None |
@@ -45,6 +45,9 @@
 ## Screenshots of Application
 
 Screenshots
+![alt text](https://github.com/kristendynamite/givemo/blob/master/src/assets/splash_screen.jpg?raw=true)
+![alt text](https://github.com/kristendynamite/givemo/blob/master/src/assets/profile_page.jpg?raw=true)
+![alt text](https://github.com/kristendynamite/givemo/blob/master/src/assets/search_page.jpg?raw=true)
 
 
 Style guide for application
