@@ -12,17 +12,21 @@
 |---|---|---|
 | Application will start at a login screen | none | Sign in with Google |
 | Sign in with a Google account | Text username and password | Application will take user to profile view. |
-| User Profile View will have Profile picture imported from Google, User Name, Total Donation amount, Joined date, Favorite causes, and buttons for Log Out, and Find a Cause, Search, About, Profile. | See below | See below |
+| User Profile View will have Profile picture imported from Google, User Name, Total Donation amount, Joined date, Favorite causes, and buttons for Log Out, and Find a Cause. | See below | See below |
+| Nave bar will be present on all views and will have buttons for Search, About, and Profile. | Click | See below |
 | Log Out button | Click | Will log the user out and return to Log In screen. |
-| Search button (magnifying glass icon) | Click | Will take user charity search page. |
-| Find a Cause button | Click | Will take user charity search page. |
 | About button | Click | Will take user to about page. |
+| About page will display information about Givemo and the individual developers. | None | None |
 | If a charity has been chosen as a favorite it will be displayed on the Profile page | None | See Below |
-| Favorited charities will display the charity name, Total that the user has donated to it, and buttons for donate and remove from favorites. | See below | See below |
+| Favorited charities will display the charity name, Total $ that the user has donated to it, and buttons for donate and remove from favorites. | See below | See below |
 | Donate button will pop up a donation window | Click |  |
 | Remove button will remove the selected charity from the favorites list. | Click | The charity will no longer be displayed on the user profile page. |
-|  |  |  |
-|  |  |  |
+| Search button (magnifying glass icon) or Find a Cause button | Click | Will take user charity search page. |
+| Search page will have 2 ways to search, Search by name, and by category selection | none | See below |
+| Search by Name entry field | Text: Center | Display all charities with center somewhere in the name.  |
+| Category selection | Click: Human Rights | Display all charities associated to the Human Rights category of charities |
+| Charities that have been found by the search will display the Charity name, charity category, a link to the charities website, the charity's tag line, the overall charity rating, and buttons for More Info, Donate, and Add to Favorites. | None | None |
+| More Info button | Click | Will display a hidden window displaying the Charity's mission statement. |
 |  |  |  |
 |  |  |  |
 |  |  |  |
