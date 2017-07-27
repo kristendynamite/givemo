@@ -18,21 +18,28 @@ export class CharityListComponent implements OnInit {
   selectedCharity = null;
   // selectedDonate = null;
 
+  // charities = null;
   @Input() charities: any[];
   @Input() favoriteCharities: any[];
 
-  savedFavorites: any[] = [];
 
+  constructor(private firebase: FirebaseService) {
 
-  constructor(private firebase: FirebaseService) { }
-
-  saveFavorite(charityName: string) {
-    let newUserFavorite: UserFavorite = new UserFavorite(charityName);
-    this.firebase.addCharity(newUserFavorite);
   }
 
-  // toggleSavedCharityIcon(favoritedCharity: string) {
-  //   let newSavedCharities:
+  saveFavorite(charity: any) {
+
+    let newUserFavorite: UserFavorite = new UserFavorite(charity.charityName);
+    this.firebase.addCharity(newUserFavorite);
+    this.firebase.getCharityFavoriteById(charity.$key).set(true)
+
+    console.log(newUserFavorite);
+    console.log(this.favoriteCharities);
+
+  }
+
+  // unFavorite(selectedFavoriteCharity: UserFavorite) {
+  //   this.firebase.unFavorite(selectedFavoriteCharity);
   // }
 
   showDetails(charity) {
@@ -47,16 +54,7 @@ export class CharityListComponent implements OnInit {
     this.selectedCharity = charity;
   }
 
-
-
   ngOnInit() {
-
-    // showCategory(category: string) {
-    //   if (category === "1"){
-    //     this.category = "Animal"
-    //   }
-    // };
-
   }
 
 }

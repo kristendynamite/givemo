@@ -66,8 +66,9 @@ export class ProfileComponent implements OnInit {
 
   deleteCharity(selectedFavoriteCharity: UserFavorite) {
     this.database.deleteCharity(selectedFavoriteCharity);
-    alert("This charity has been deleted from your list of saved favorites.");
+    // alert("This charity has been deleted from your list of saved favorites.");
   }
+
 
   logout() {
     this.authService.logout();

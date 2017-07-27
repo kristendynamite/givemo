@@ -21,39 +21,48 @@ export class FirebaseService {
    getCharities(){
      return this.charities;
    }
-
-   getFavoriteCharities(){
+   getFavoriteCharities() {
      return this.favoriteCharities;
    }
-
    addCharity(newFavorite: UserFavorite) {
      this.favoriteCharities.push(newFavorite);
    }
-
+   getCharityByName(favoritedCharityName: string) {
+     return this.database.list(`/charities`, {
+       query: {
+         orderByChild: 'charityName',
+         equalTo: favoritedCharityName
+       }
+     });
+   }
    deleteCharity(selectedFavoriteCharity) {
      let savedCharity = this.getCharityById(selectedFavoriteCharity.$key);
      savedCharity.remove();
-   }
 
-   getCharityById(charityId:string){
-     return this.database.object('favoriteCharities/' + charityId);
-   }
-   //this method does not work. the result comes back as false because when you subscribe it runs async so if returns false before it can complete the if statement.
-   charityIsFavorited(charityMatch: string) {
-
-     let result = false;
-     const sub = this.favoriteCharities.subscribe(favorited => {
-       for(let i =0; favorited.length > i; i++ ) {
-         if(favorited[i].charityName == charityMatch){
-           result = true;
-         }
-       }
+     this.getCharityByName(selectedFavoriteCharity.charityName).subscribe(data => {
+       const charityKey: string = data[0].$key;
+       this.getCharityFavoriteById(charityKey).set(false);
      });
+   }
+   //```````not working method yet ````````
 
-     sub.unsubscribe()
-     console.log(result)
 
-    return result;
+  //  unFavorite(selectedFavoriteCharity) {
+  //    let savedCharity = this.getCharityById(selectedFavoriteCharity.$key);
+  //    savedCharity.remove();
+   //
+  //    this.getCharityByName(selectedFavoriteCharity.charityName).subscribe(data => {
+  //      const charityKey: string = data[0].$key;
+  //      this.getCharityFavoriteById(charityKey).set(true);
+  //    });
+  //  }
+
+   getCharityById(charityName:string){
+     return this.database.object('favoriteCharities/' + charityName);
+   }
+
+   getCharityFavoriteById(favoritedId: string){
+     return this.database.object('charities/' + favoritedId + '/favorited');
    }
 
 }
