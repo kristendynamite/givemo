@@ -2,11 +2,58 @@
   <div *ngFor="let charity of charities">
     <div class="charities">
       <h4>{{charity.charityName}}</h4>
-      <i (click)="saveFavorite(charity.charityName)" class="fa fa-heart-o" aria-hidden="true"></i>
-      <p>{{charity.category}}</p>
+
+
+      <!-- this is not being implemented yet, but will trigger the heart to toggle on and off -->
+      <div *ngIf="firebase.charityIsFavorited(charity.charityName)">
+        <i (click)="saveFavorite(charity.charityName);" class="fa fa-heart-o" aria-hidden="true"></i>
+      </div>
+
+
+
+      <!-- </div> -->
+
+        <!-- <div *ngIf"charity.charityName == favoriteCharities.charityName"> -->
+        <!-- <i (click)="saveFavorite(charity.charityName)" class="fa fa-heart-o" aria-hidden="true"></i>
+      <! </div> -->
+
+      <div *ngIf="charity.category == 1">
+        <div>Animal</div>
+      </div>
+      <div *ngIf="charity.category == 2">
+        <div>Arts & Culture</div>
+      </div>
+      <div *ngIf="charity.category == 3">
+        <div>Community</div>
+      </div>
+      <div *ngIf="charity.category == 4">
+        <div>Education</div>
+      </div>
+      <div *ngIf="charity.category == 5">
+        <div>Environment</div>
+      </div>
+      <div *ngIf="charity.category == 6">
+        <div>Health</div>
+      </div>
+      <div *ngIf="charity.category == 7">
+        <div>Human Rights</div>
+      </div>
+      <div *ngIf="charity.category == 8">
+        <div>Human Services</div>
+      </div>
       <a href="{{charity.websiteURL}}">Visit Website</a>
       <p>{{charity.tag_line}}</p>
-      <p>Rating: {{charity.rating}}</p>
+
+      <div *ngIf="charity.rating == 3">
+        <div> Rating: <p class="fa fa-heart-o"></p><p class="fa fa-heart-o"></p><p class="fa fa-heart-o"></p>
+        </div>
+      </div>
+      <div *ngIf="charity.rating == 4">
+        <div> Rating:<p class="fa fa-heart-o"></p><p class="fa fa-heart-o"></p><p class="fa fa-heart-o"></p><p class="fa fa-heart-o"></p>
+        </div>
+      </div>
+
+      <!-- <p>Rating: {{charity.rating}}</p> -->
       <button (click)='showDetails(charity)' type="submit" name="button">More Info</button>
       <button (click)='selectedCharity = ""' type="submit" name="button">Hide Info</button>
       <ng-container *ngIf="show && selectedCharity === charity">

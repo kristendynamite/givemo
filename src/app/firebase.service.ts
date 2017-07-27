@@ -38,4 +38,22 @@ export class FirebaseService {
    getCharityById(charityId:string){
      return this.database.object('favoriteCharities/' + charityId);
    }
+   //this method does not work. the result comes back as false because when you subscribe it runs async so if returns false before it can complete the if statement.
+   charityIsFavorited(charityMatch: string) {
+
+     let result = false;
+     const sub = this.favoriteCharities.subscribe(favorited => {
+       for(let i =0; favorited.length > i; i++ ) {
+         if(favorited[i].charityName == charityMatch){
+           result = true;
+         }
+       }
+     });
+
+     sub.unsubscribe()
+     console.log(result)
+
+    return result;
+   }
+
 }

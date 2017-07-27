@@ -15,19 +15,30 @@ export class CharityListComponent implements OnInit {
   show = false;
   category = "";
   selectedCharity = null;
+
   @Input() charities: any[];
-  favoriteCharities: FirebaseListObservable<any[]>;
-  // savedFavorites: any[] = [];
+  @Input() favoriteCharities: any[];
+
+  // favoriteCharities: FirebaseListObservable<any[]>;
+  savedFavorites: any[] = [];
 
 
   constructor(private firebase: FirebaseService) { }
 
   saveFavorite(charityName: string) {
     console.log(charityName);
+
     let newUserFavorite: UserFavorite = new UserFavorite(charityName);
     this.firebase.addCharity(newUserFavorite);
+    
     console.log(newUserFavorite);
+    console.log(this.favoriteCharities);
   }
+
+  // toggleSavedCharityIcon(favoritedCharity: string) {
+  //   let newSavedCharities:
+  // }
+
   showDetails(charity) {
     this.show = true;
     this.selectedCharity = charity;
