@@ -1,8 +1,18 @@
-# _Givemo - A mobile friendly charity donation app_
+<h1 align="center"><img src="https://raw.githubusercontent.com/kristendynamite/givemo/blob/master/src/assets/logo.png"></h1>
 
-#### Angular2 - Group Week Project
-
+## Angular2 - Group Week Project
+## givemo / A mobile-friendly charity donation app
 #### By _Kristen McKee, Connor Larsen, Nick Wise and, Guy Anderson 7/27/2017_
+
+#### Style guide for application
+![alt text](https://github.com/kristendynamite/givemo/blob/master/src/assets/style_guide.jpg?raw=true?width="200")
+
+## Screenshots of Application
+
+Screenshots
+![alt text](https://github.com/kristendynamite/givemo/blob/master/src/assets/splash_screen.png?raw=true)
+![alt text](https://github.com/kristendynamite/givemo/blob/master/src/assets/profile_page.png?raw=true)
+![alt text](https://github.com/kristendynamite/givemo/blob/master/src/assets/search_page.png?raw=true)
 
 ## Description
 To view the Website go to https://givemo-6e37c.firebaseapp.com and log into your google account.
@@ -40,20 +50,6 @@ To view the Website go to https://givemo-6e37c.firebaseapp.com and log into your
 | Add charity to favorites button (open heart icon) | Click | Charity will now be displayed on user profile page. |
 | Once a charity has been added to favorites, the add to favorite button will change to a red heart. | None | Red heart. |
 | Remove from favorites. | Click the Add to favorites button a second time. | Charity will be removed from user profile page. |
-
-
-## Screenshots of Application
-
-Screenshots
-![alt text](https://github.com/kristendynamite/givemo/blob/master/src/assets/splash_screen.png?raw=true)
-![alt text](https://github.com/kristendynamite/givemo/blob/master/src/assets/profile_page.png?raw=true)
-![alt text](https://github.com/kristendynamite/givemo/blob/master/src/assets/search_page.png?raw=true)
-
-
-Style guide for application
-![alt text](https://github.com/kristendynamite/givemo/blob/master/src/assets/style_guide.jpg?raw=true)
-
-
 
 ## Setup/Installation Requirements
 
