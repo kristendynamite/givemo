@@ -1,11 +1,10 @@
-<h1 align="center"><img src="https://raw.githubusercontent.com/kristendynamite/givemo/blob/master/src/assets/logo.png"></h1>
+<h1 align="center"><img src="https://github.com/kristendynamite/givemo/blob/master/src/assets/logo.png?raw=true"></h1>
 
 ## Angular2 - Group Week Project
 ## givemo / A mobile-friendly charity donation app
 #### By _Kristen McKee, Connor Larsen, Nick Wise and, Guy Anderson 7/27/2017_
 
-#### Style guide for application
-![alt text](https://github.com/kristendynamite/givemo/blob/master/src/assets/style_guide.jpg?raw=true?width="200")
+![alt text](https://github.com/kristendynamite/givemo/blob/master/src/assets/style_guide.jpg?raw=true)
 
 ## Screenshots of Application
 
